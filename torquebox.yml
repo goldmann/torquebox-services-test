@@ -1,6 +1,9 @@
 queues:
   /queues/test:
 
+topics:
+  /topics/test:
+
 services:
   test-service:
     service: TestService
