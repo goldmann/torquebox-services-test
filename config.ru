@@ -1,5 +1,5 @@
 require 'bundler/setup'
 require 'sinatra'
-require 'poorsmatic'
+require 'services-test'
 
-run Poorsmatic
+run ServicesTest
