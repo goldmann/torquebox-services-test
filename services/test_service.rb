@@ -16,7 +16,19 @@ class TestService
     puts @topic1.class
 
     @queue.publish "test"
-    @queue1.publish "test"
+    @topic.publish "test"
+
+    begin
+      @queue1.publish "test"
+    rescue Exception => e
+      puts "Publish to queue1 failed; #{e.message}"
+    end
+
+    begin
+      @topic1.publish "test"
+    rescue Exception => e
+      puts "Publish to topic1 failed; #{e.message}"
+    end
   end
 
   def stop
