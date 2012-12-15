@@ -1,0 +1,7 @@
+queues:
+  /queues/test:
+
+services:
+  test-service:
+    service: TestService
+
